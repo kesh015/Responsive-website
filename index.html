@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+<nav>
+
+    <img src="images/logo2.png" alt="" class="logo">
+    <div class="nav-right">
+        <ul id="menu-links">
+            <li>Home</li>
+            <li>Services</li>
+            <li>Projects</li>
+            <li>About us</li>
+        </ul>
+        <button class="nav-btn"> Get Started <img src="images/arrow-white.png" alt=""></button>
+    </div>
+
+    <img src="images/menu.png" alt="" class="menu-icon" onclick="toggleMenu()">
+</nav>
+
+<div class="header">
+    <div class="header-content">
+        <h1><span>Free</span> <br> <span> Lancer</span></h1>
+    <div class="btn-container">
+        <button class="btn-dark"> Request a call back<img src="images/phone.png" alt=""></button>
+        <button class="btn-light"> Know More<img src="images/arrow-black.png"></button>
+    </div>
+    <p>Passionate Full Stack Developer looking for great opportunites to build.</p>
+
+
+    </div>
+
+    <img src="images/user1.jpg" alt="" class="user-img">  
+</div>
+
+
+<script>
+
+    let navbar = document.querySelector('nav');
+    let menuLinks = document.getElementById("menu-links")
+
+    function toggleMenu(){
+        menuLinks.classList.toggle('show-menu');
+
+    }
+
+
+
+
+
+    window.onscroll = function(){
+        if(window.scrollY > 0 ){
+            navbar.style.background = '#f8f8f8';
+        }else{
+            navbar.style.background = 'transparent';
+        }
+    }
+</script>
+
+</body>
+</html>
