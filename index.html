@@ -1,70 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="description" content="Responsive website by C Keshav Reddy — showcasing clean design, responsive layouts, and modern web development skills." />
+    <meta name="author" content="C Keshav Reddy" />
+    <meta name="robots" content="index, follow" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Responsive Website | C Keshav Reddy</title>
 
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="icon" href="images/logo2.png" type="image/png" />
 </head>
 <body>
     
 <nav>
-
-    <img src="images/logo2.png" alt="" class="logo">
+    <img src="images/logo2.png" alt="Website Logo" class="logo" />
     <div class="nav-right">
         <ul id="menu-links">
             <li>Home</li>
             <li>Services</li>
             <li>Projects</li>
-            <li>About us</li>
+            <li>About Us</li>
         </ul>
-        <button class="nav-btn"> Get Started <img src="images/arrow-white.png" alt=""></button>
+        <button class="nav-btn">Get Started <img src="images/arrow-white.png" alt=""></button>
     </div>
 
-    <img src="images/menu.png" alt="" class="menu-icon" onclick="toggleMenu()">
+    <img src="images/menu.png" alt="Menu Icon" class="menu-icon" onclick="toggleMenu()" />
 </nav>
 
-<div class="header">
+<header class="header">
     <div class="header-content">
-        <h1><span>Free</span> <br> <span> Lancer</span></h1>
-    <div class="btn-container">
-        <button class="btn-dark"> Request a call back<img src="images/phone.png" alt=""></button>
-        <button class="btn-light"> Know More<img src="images/arrow-black.png"></button>
+        <h1><span>Free</span><br><span>Lancer</span></h1>
+        <div class="btn-container">
+            <button class="btn-dark">Request a Call Back <img src="images/phone.png" alt=""></button>
+            <button class="btn-light">Know More <img src="images/arrow-black.png" alt=""></button>
+        </div>
+        <p>Passionate Full Stack Developer looking for great opportunities to build impactful products.</p>
     </div>
-    <p>Passionate Full Stack Developer looking for great opportunites to build.</p>
-
-
-    </div>
-
-    <img src="images/user1.jpg" alt="" class="user-img">  
-</div>
-
+    <img src="images/user1.jpg" alt="User Image" class="user-img" />  
+</header>
 
 <script>
+    const navbar = document.querySelector('nav');
+    const menuLinks = document.getElementById("menu-links");
 
-    let navbar = document.querySelector('nav');
-    let menuLinks = document.getElementById("menu-links")
-
-    function toggleMenu(){
+    function toggleMenu() {
         menuLinks.classList.toggle('show-menu');
-
     }
 
-
-
-
-
-    window.onscroll = function(){
-        if(window.scrollY > 0 ){
-            navbar.style.background = '#f8f8f8';
-        }else{
-            navbar.style.background = 'transparent';
-        }
-    }
+    window.onscroll = () => {
+        navbar.style.background = window.scrollY > 0 ? '#f8f8f8' : 'transparent';
+    };
 </script>
 
 </body>
